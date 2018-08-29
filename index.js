@@ -1,2 +1,6 @@
-
-90d8f66ff05b34a24041a5eb90b92587f28fd900
+const token = 'YOUR_TOKEN_HERE'
+fetch('https://api.github.com/user/repos', {
+  headers: {
+    Authorization: `token ${token}`
+  }
+}).then(res => res.json()).then(json => console.log(json));
